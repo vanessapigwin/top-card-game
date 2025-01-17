@@ -17,6 +17,9 @@ function App() {
     matcha,
     matcha,
     matcha,
+    matcha,
+    matcha,
+    matcha,
   ]);
 
   console.log(window.innerWidth);
