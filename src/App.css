@@ -40,7 +40,6 @@
   align-content: center;
 }
 
-
 @media screen and (max-width: 900px) {
   .container.title {
     flex-direction: column;
