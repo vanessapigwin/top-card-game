@@ -58,7 +58,7 @@ function App() {
   return (
     <>
       <div className="container title">
-        <h1>Cat Memo Game</h1>
+        <h1>Plz Kitty Memo Game</h1>
         <div className="scorecard">
           <span>Current Score: {currentScore}</span>
           <span>High Score: {highScore}</span>
