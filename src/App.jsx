@@ -5,11 +5,9 @@ import Card from "./components/Card";
 function App() {
   const [highScore, setHighScore] = useState(0);
   const [currentScore, setCurrentScore] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(true);
   const [selected, setSelected] = useState([]);
   const [imgList, setImgList] = useState([]);
   const url = "https://api.thecatapi.com/v1/images/search?limit=10";
-
 
   function dealCards(selectedCards, apiCards) {
     if (selectedCards.length === 0) return apiCards;
@@ -28,7 +26,7 @@ function App() {
       setHighScore(currentScore);
       setCurrentScore(0);
       setSelected([]);
-      alert("Game Over!");
+      alert("Meow! Game Over!");
     } else {
       const newSelected = [...selected, link];
       setSelected(newSelected);
