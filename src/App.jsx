@@ -23,7 +23,7 @@ function App() {
     const link = e.target.src;
 
     if (selected.includes(link)) {
-      setHighScore(currentScore);
+      if (currentScore > highScore) setHighScore(currentScore);
       setCurrentScore(0);
       setSelected([]);
       alert("Meow! Game Over!");
