@@ -7,7 +7,7 @@ function App() {
   const [currentScore, setCurrentScore] = useState(0);
   const [selected, setSelected] = useState([]);
   const [imgList, setImgList] = useState([]);
-  const url = "https://api.thecatapi.com/v1/images/search?limit=10";
+  const url = "https://api.thecatapi.com/v1/images/search?limit=10&size=small";
 
   function dealCards(selectedCards, apiCards) {
     if (selectedCards.length === 0) return apiCards;
@@ -26,7 +26,7 @@ function App() {
       if (currentScore > highScore) setHighScore(currentScore);
       setCurrentScore(0);
       setSelected([]);
-      alert("Meow! Game Over!");
+      alert("Plz pet the cats only once! Pet again?");
     } else {
       const newSelected = [...selected, link];
       setSelected(newSelected);
