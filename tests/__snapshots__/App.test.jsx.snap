@@ -1,0 +1,82 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`App component > Call cats on render 1`] = `
+<div>
+  <div
+    class="container title"
+  >
+    <h1>
+      Plz Kitty Memo Game
+    </h1>
+    <div
+      class="scorecard"
+    >
+      <span>
+        Current Score: 
+        0
+      </span>
+      <span>
+        High Score: 
+        0
+      </span>
+    </div>
+  </div>
+  <div
+    class="container card-area"
+  />
+</div>
+`;
+
+exports[`App component > Default render 1`] = `
+<div>
+  <div
+    class="container title"
+  >
+    <h1>
+      Plz Kitty Memo Game
+    </h1>
+    <div
+      class="scorecard"
+    >
+      <span>
+        Current Score: 
+        0
+      </span>
+      <span>
+        High Score: 
+        0
+      </span>
+    </div>
+  </div>
+  <div
+    class="container card-area"
+  />
+</div>
+`;
+
+exports[`App component initial page load > Default render 1`] = `
+<div>
+  <div
+    class="container title"
+  >
+    <h1>
+      Plz Kitty Memo Game
+    </h1>
+    <div
+      class="scorecard"
+    >
+      <span>
+        Current Score: 
+        0
+      </span>
+      <span>
+        High Score: 
+        0
+      </span>
+    </div>
+  </div>
+  <div
+    class="container card-area"
+  />
+</div>
+`;
