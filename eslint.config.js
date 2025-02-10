@@ -6,6 +6,7 @@ import reactRefresh from "eslint-plugin-react-refresh";
 import eslintConfigPrettier from "eslint-config-prettier";
 
 export default [
+  eslintConfigPrettier,
   { ignores: ["dist"] },
   {
     files: ["**/*.{js,jsx}"],
@@ -34,8 +35,6 @@ export default [
         "warn",
         { allowConstantExport: true },
       ],
-      "react/prop-types": 1,
     },
   },
-  eslintConfigPrettier,
 ];

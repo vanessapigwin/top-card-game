@@ -35,6 +35,8 @@ jobs:
         run: npm ci
       - name: Run test
         run: npm test
+      - name: run linter
+        run: npm run lint
 
   deploy:
     needs: run-tests

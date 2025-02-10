@@ -1,3 +1,4 @@
+/*global global*/
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
@@ -60,17 +61,17 @@ describe("Click kitties behavior", () => {
       .spyOn(global, "fetch")
       .mockImplementation(() => newfakePromise("kitty2"));
 
-    const user = userEvent.setup()
-    let selected
+    const user = userEvent.setup();
+    let selected;
     render(<App />);
 
     expect(mockFetch).toHaveBeenCalledOnce();
     waitFor(() => {
-        selected = screen.getByRole("img")
-        expect(selected.getAttribute('src')).toBe("kitty2.jpg")
+      selected = screen.getByRole("img");
+      expect(selected.getAttribute("src")).toBe("kitty2.jpg");
 
-        user.click(selected)
-        expect(mockFetch).toHaveBeenCalledTimes(2)
-    })
+      user.click(selected);
+      expect(mockFetch).toHaveBeenCalledTimes(2);
+    });
   });
 });
