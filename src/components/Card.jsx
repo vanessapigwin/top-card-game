@@ -11,7 +11,7 @@ function Card({ imgSrc, handleClick }) {
 
 Card.propTypes = {
   imgSrc: PropTypes.string.isRequired,
-  handleClick: PropTypes.func.isRequired
+  handleClick: PropTypes.func.isRequired,
 };
 
 export default Card;

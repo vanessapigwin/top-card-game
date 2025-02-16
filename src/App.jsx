@@ -7,6 +7,7 @@ function App() {
   const [currentScore, setCurrentScore] = useState(0);
   const [selected, setSelected] = useState([]);
   const [imgList, setImgList] = useState([]);
+  const [loadFinished, setLoadFinished] = useState(false);
   const url = "https://api.thecatapi.com/v1/images/search?limit=10&size=small";
 
   function dealCards(selectedCards, apiCards) {
@@ -20,6 +21,7 @@ function App() {
   }
 
   function selectCard(e) {
+    setLoadFinished(false);
     const link = e.target.src;
 
     if (selected.includes(link)) {
@@ -47,7 +49,8 @@ function App() {
           urlList.length = 8;
           const newCards = dealCards(selected, urlList);
           setImgList(newCards);
-        });
+        })
+        .finally(() => setLoadFinished(true));
     }
 
     return () => {
@@ -66,13 +69,15 @@ function App() {
       </div>
 
       <div className="container card-area">
-        {imgList.map((img) => (
-          <Card
-            imgSrc={img}
-            handleClick={selectCard}
-            key={crypto.randomUUID()}
-          ></Card>
-        ))}
+        {loadFinished
+          ? imgList.map((img) => (
+              <Card
+                imgSrc={img}
+                handleClick={selectCard}
+                key={crypto.randomUUID()}
+              ></Card>
+            ))
+          : null}
       </div>
     </>
   );
